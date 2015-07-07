@@ -75,6 +75,7 @@ $keywords = single_tag_title('', false);
 				get_search_form();
 			?>
         </div>
+<!-- 无用的地方
         <div class="nav">
         	<ul>
             	<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'false', 'items_wrap' => '%3$s'));?>
@@ -82,4 +83,5 @@ $keywords = single_tag_title('', false);
             </ul>
             
         </div>
+-->
     </div>

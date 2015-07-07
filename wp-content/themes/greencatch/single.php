@@ -5,8 +5,16 @@
         <?php while ( have_posts() ) : the_post(); ?>
                 <div class="article">
                 <h1>
-					<?php the_title(); ?>
-					<div class= "article-view">浏览数：<?php global $view_count; if(function_exists('the_views')) { $view_count = the_views(null,false); echo "$view_count";} ?></div>
+					<font size="6"><?php the_title(); ?></font>
+					<div class="info">
+						<font size="2">
+							<span class="meat_span">分类: <?php the_category(', ') ?>&nbsp&nbsp</span>
+							<span class="meat_span"><font size="2">发布时间: <?php the_time('Y-m-d H:i') ?>&nbsp&nbsp&nbsp&nbsp</font></span>
+							<span class="meat_span"><?php if(function_exists(the_views)) { echo the_views(null, false);}?>次浏览&nbsp&nbsp&nbsp&nbsp</span>
+							<span class="meat_span"><?php comments_popup_link ('没有评论','1条评论','%条评论'); ?>&nbsp&nbsp&nbsp&nbsp</span>
+						</font>
+					</div>
+					
 				</h1>
                 <?php if ( has_post_thumbnail() ) { ?>
                 <div class="article-img">

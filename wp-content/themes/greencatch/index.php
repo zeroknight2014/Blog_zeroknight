@@ -21,10 +21,11 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                    <?php the_excerpt(); ?>
                 </div>
                 <div class="article-info">
-                    <i class="fa fa-calendar"></i> <?php the_time("Y-m-d");?> &nbsp; <i class="fa fa-map-marker"></i> 
-					<?php
-						the_category(',');
-					?>
+                    <i class="fa fa-calendar"></i> <?php the_time("Y-m-d");?> &nbsp; 
+					<i class="fa fa-map-marker"></i> <?php the_category(',');?> &nbsp;
+					<i class="fa fa-map-marker"></i> <?php if(function_exists(the_views)) { echo the_views(null, false);}?>次浏览&nbsp
+					<i class="fa fa-map-marker"></i> <?php comments_popup_link ('没有评论','1条评论','%条评论'); ?>&nbsp
+					
                 </div>
                 <div class="readmore"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>" alt="<?php the_title();?>">+ 阅读全文</a></div>
             </article>
