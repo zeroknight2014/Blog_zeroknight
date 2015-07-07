@@ -26,10 +26,11 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                     <i class="fa fa-calendar"></i> <?php the_time("Y-m-d");?> &nbsp; 
 					<i class="fa fa-map-marker"></i> <?php	$category = get_the_category();	echo $category[0]->cat_name;?> &nbsp;
 					<i class="fa fa-map-marker"></i> <?php if(function_exists(the_views)) { echo the_views(null, false);}?>次浏览&nbsp
-					<i class="fa fa-map-marker"></i> <?php comments_popup_link ('没有评论','1条评论','%条评论'); ?>&nbsp
+					<i class="fa fa-map-marker"></i> <span id = "url::<?php the_permalink();?>" class = "cy_cmt_count" ></span>次评论&nbsp;
                 </div>
                 <div class="readmore"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>" alt="<?php the_title();?>">+ 阅读全文</a></div>
-            </div>
+				<script id="cy_cmt_num" src="http://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyrRuU5eE"></script>
+			</div>
                     <?php
 							endwhile; else:
 							?>

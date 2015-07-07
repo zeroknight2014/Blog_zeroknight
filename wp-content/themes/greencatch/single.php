@@ -11,7 +11,8 @@
 							<span class="meat_span">分类: <?php the_category(', ') ?>&nbsp&nbsp</span>
 							<span class="meat_span"><font size="2">发布时间: <?php the_time('Y-m-d H:i') ?>&nbsp&nbsp&nbsp&nbsp</font></span>
 							<span class="meat_span"><?php if(function_exists(the_views)) { echo the_views(null, false);}?>次浏览&nbsp&nbsp&nbsp&nbsp</span>
-							<span class="meat_span"><?php comments_popup_link ('没有评论','1条评论','%条评论'); ?>&nbsp&nbsp&nbsp&nbsp</span>
+							<span class="meat_span"><a href="#SOHUCS" id="changyan_count_unit"></a>次评论&nbsp&nbsp&nbsp&nbsp
+<script type="text/javascript" src="http://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script></span>
 						</font>
 					</div>
 					
